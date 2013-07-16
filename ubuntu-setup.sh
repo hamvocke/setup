@@ -27,6 +27,7 @@ echo 'Done.'
 echo 'Configuring git'
 git config --global user.name "hamvocke"
 git config --global user.email "hermann.vocke@gmail.com"
+git config --global credential.helper cache
 echo 'Done.'
 
 # checkout git repos  
