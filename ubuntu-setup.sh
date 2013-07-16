@@ -65,4 +65,6 @@ fi
 # copy key to clipboard
 xclip -sel clip < ~/.ssh/id_rsa.pub
 echo 'Done. You can now go and paste them to your github account: https://github.com/settings/ssh'
-
+firefox https://github.com/settings/ssh
+ssh -T git@github.com
+echo 'Configured github access successfully.'
