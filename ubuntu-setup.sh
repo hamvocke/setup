@@ -23,6 +23,12 @@ echo 'Installing oh-my-zsh'
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 echo 'Done.'
 
+# Configure git
+echo 'Configuring git'
+git config --global user.name "hamvocke"
+git config --global user.email "hermann.vocke@gmail.com"
+echo 'Done.'
+
 # checkout git repos  
 echo 'Loading personal configuration from github'
 git clone https://github.com/hamvocke/dotfiles.git .dotfiles 
