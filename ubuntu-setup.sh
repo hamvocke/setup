@@ -15,7 +15,7 @@ echo 'Done.'
 
 # install apps from software-repos
 echo 'Installing favourite applications'
-sudo apt-get install -y vim ubuntu-restricted-extras git-core gimp inkscape nautilus-dropbox sublime-text-3 chromium 
+sudo apt-get install -y vim ubuntu-restricted-extras git-core gimp inkscape nautilus-dropbox sublime-text-3 chromium xclip keepassx 
 echo 'Done.'
 
 # install more apps
@@ -52,3 +52,17 @@ gconftool-2 --set "/apps/gnome-terminal/profiles/Default/palette" --type string 
 gconftool-2 --set "/apps/gnome-terminal/profiles/Default/background_color" --type string "#00002B2B3636"
 gconftool-2 --set "/apps/gnome-terminal/profiles/Default/foreground_color" --type string "#65657B7B8383"
 echo 'Done.'
+
+# Generate SSH keys
+cd ~/.ssh
+if [ ! -f id_rsa.pub -o ! -f id_dsa.pub ]; then 
+# Checks if keys have already been generated
+    echo 'Creating SSH keys'
+    ssh-keygen -t rsa -C "hermann.vocke@gmail.com";
+else
+    echo "SSH keys already exists."
+fi
+# copy key to clipboard
+xclip -sel clip < ~/.ssh/id_rsa.pub
+echo 'Done. You can now go and paste them to your github account: https://github.com/settings/ssh'
+
