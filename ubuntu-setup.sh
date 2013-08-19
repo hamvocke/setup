@@ -15,7 +15,7 @@ echo 'Done.'
 
 # install apps from software-repos
 echo 'Installing favourite applications'
-sudo apt-get install -y vim ubuntu-restricted-extras git-core gimp inkscape nautilus-dropbox sublime-text-3 chromium xclip keepassx 
+sudo apt-get install -y vim ubuntu-restricted-extras git-core gimp inkscape nautilus-dropbox sublime-text-3 chromium xclip keepassx htop python-pip python-virtualenv ttf-mscorefonts-installer
 echo 'Done.'
 
 # install more apps
