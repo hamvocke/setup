@@ -15,7 +15,7 @@ echo 'Done.'
 
 # install apps from software-repos
 echo 'Installing favourite applications'
-sudo apt-get install -y vim ubuntu-restricted-extras git-core gimp inkscape nautilus-dropbox sublime-text-3 chromium xclip keepassx htop python-pip python-virtualenv ttf-mscorefonts-installer
+sudo apt-get install -y vim ubuntu-restricted-extras git-core gimp inkscape nautilus-dropbox sublime-text-3 chromium xclip keepassx htop python-pip python-virtualenv ttf-mscorefonts-installer ncurses-term
 echo 'Done.'
 
 # install more apps
@@ -37,7 +37,7 @@ git clone https://github.com/hamvocke/dotfiles.git .dotfiles
 echo 'Replacing dotfiles'
 mkdir -p .dotfiles_old
 cd .dotfiles
-for file in "bashrc vimrc vim zshrc tmux.conf"; do
+for file in "bashrc vimrc vim zshrc tmux.conf Xmodmap"; do
     mv ~./.$file ~/.dotfiles_old
     echo 'Creating symlink to $file'
     ln -s .dotfiles/$file ~/.$file
